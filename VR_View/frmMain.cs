@@ -158,8 +158,28 @@ namespace VR_View
 
         private void frmMain_Load(object sender, EventArgs e)
         {
+            //Position-Zero initialization
+            trackBar1.Minimum = -100;
+            trackBar1.Maximum = 100;
+            trackBar1.Value = 0;  
 
+            trackBar2.Minimum = -100;
+            trackBar2.Maximum = 100;
+            trackBar2.Value = 0;  
+
+            trackBar3.Minimum = 50;
+            trackBar3.Maximum = 150;
+            trackBar3.Value = 100;
+
+            imgPreview.Width = 500;
+            imgPreview.Height = 500;
+            imgPreview.Left = (panelPreviewContainer.Width / 4 - imgPreview.Width / 2);
+
+            imgPreview2.Width = 500;
+            imgPreview2.Height = 500;
+            imgPreview2.Left = (panelPreviewContainer.Width * 3 / 4 - imgPreview2.Width / 2);
         }
+
 
         // close button
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -210,6 +230,14 @@ namespace VR_View
             pictureBox7.Visible = false;
             label9.Visible = false;
             versionLabel.Visible = false;
+
+            trackBar1.Visible = false;
+            labelTrackBar1.Visible = false;
+            trackBar2.Visible = false;
+            labelTrackBar2.Visible = false;
+            trackBar3.Visible = false;
+            labelTrackBar3.Visible = false;
+            btnReset.Visible = false;
         }
 
         // show settings button (arrow thingy)
@@ -227,6 +255,14 @@ namespace VR_View
             pictureBox6.Visible = true;
             label9.Visible = true;
             versionLabel.Visible = true;
+
+            trackBar1.Visible = true;
+            labelTrackBar1.Visible = true;
+            trackBar2.Visible = true;
+            labelTrackBar2.Visible = true;
+            trackBar3.Visible = true;
+            labelTrackBar3.Visible = true;
+            btnReset.Visible = true;
 
             if (isMaximized == true)
             {
@@ -251,5 +287,83 @@ namespace VR_View
             ToolTip tthide = new ToolTip();
             tthide.SetToolTip(this.pictureBox2, "Hide Settings");
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            //Up-Down Position
+            int offset = -trackBar1.Value;
+            int newTop = (panelPreviewContainer.Height - imgPreview.Height) / 2 + offset;
+
+            imgPreview.Top = newTop;
+            imgPreview2.Top = newTop;
+
+            labelTrackBar1.Text = trackBar1.Value.ToString(); 
+        }
+
+        private void trackBar2_Scroll(object sender, EventArgs e)
+        {
+            //Left - Right Position
+            int offset = trackBar2.Value;
+            int panelWidth = panelPreviewContainer.Width;
+            int imageWidth = imgPreview.Width;
+
+            imgPreview.Left = (panelWidth / 4 - imageWidth / 2) - offset;
+            imgPreview2.Left = (panelWidth * 3 / 4 - imageWidth / 2) - offset;
+
+            labelTrackBar2.Text = trackBar2.Value.ToString(); 
+        }
+
+        private void trackBar3_Scroll(object sender, EventArgs e)
+        {
+            //Scale
+            float scale = trackBar3.Value / 100f;
+            int panelWidth = panelPreviewContainer.Width;
+            int panelMiddle = panelWidth / 2;
+            int originalWidth = 500;
+            int originalHeight = 500;
+
+            int newWidth = (int)(originalWidth * scale);
+            int newHeight = (int)(originalHeight * scale);
+
+            imgPreview.Width = newWidth;
+            imgPreview.Height = newHeight;
+            imgPreview.Left = (panelWidth / 4 - newWidth / 2);
+
+            imgPreview2.Width = newWidth;
+            imgPreview2.Height = newHeight;
+            imgPreview2.Left = (panelWidth * 3 / 4 - newWidth / 2);
+
+            labelTrackBar3.Text = trackBar3.Value.ToString() + "%"; 
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            // Reset Sliders
+            trackBar1.Value = 0;
+            trackBar2.Value = 0;
+            trackBar3.Value = 100; 
+
+            labelTrackBar1.Text = "0";
+            labelTrackBar2.Text = "0";
+            labelTrackBar3.Text = "100%";
+
+            int panelWidth = panelPreviewContainer.Width;
+            int panelMiddle = panelWidth / 2;
+            int originalWidth = 500;
+            int originalHeight = 500;
+
+            imgPreview.Width = originalWidth;
+            imgPreview.Height = originalHeight;
+            imgPreview2.Width = originalWidth;
+            imgPreview2.Height = originalHeight;
+
+            // Reset Positions
+            imgPreview.Left = panelWidth / 4 - (originalWidth / 2);
+            imgPreview2.Left = panelWidth * 3 / 4 - (originalWidth / 2);
+
+            imgPreview.Top = (panelPreviewContainer.Height - imgPreview.Height) / 2;
+            imgPreview2.Top = imgPreview.Top;
+        }
+
     }
 }

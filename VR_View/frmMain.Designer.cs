@@ -35,9 +35,6 @@
             this.numShotEvery = new System.Windows.Forms.NumericUpDown();
             this.comboScreens = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.imgPreview = new System.Windows.Forms.PictureBox();
-            this.imgPreview2 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -47,10 +44,17 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
             this.versionLabel = new System.Windows.Forms.Label();
+            this.panelPreviewContainer = new System.Windows.Forms.Panel();
+            this.imgPreview = new System.Windows.Forms.PictureBox();
+            this.imgPreview2 = new System.Windows.Forms.PictureBox();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
+            this.labelTrackBar1 = new System.Windows.Forms.Label();
+            this.labelTrackBar2 = new System.Windows.Forms.Label();
+            this.trackBar2 = new System.Windows.Forms.TrackBar();
+            this.labelTrackBar3 = new System.Windows.Forms.Label();
+            this.trackBar3 = new System.Windows.Forms.TrackBar();
+            this.btnReset = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numShotEvery)).BeginInit();
-            this.tableLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPreview2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -58,6 +62,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.panelPreviewContainer.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPreview2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStopServer
@@ -153,59 +163,6 @@
             this.label7.Size = new System.Drawing.Size(47, 13);
             this.label7.TabIndex = 36;
             this.label7.Text = "Screen :";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.tableLayoutPanel1.AutoSize = true;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Controls.Add(this.imgPreview, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.imgPreview2, 1, 0);
-            this.tableLayoutPanel1.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(12, 113);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1476, 674);
-            this.tableLayoutPanel1.TabIndex = 43;
-            // 
-            // imgPreview
-            // 
-            this.imgPreview.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgPreview.BackColor = System.Drawing.Color.Transparent;
-            this.imgPreview.Image = global::VR_View.Properties.Resources.previewbg;
-            this.imgPreview.InitialImage = global::VR_View.Properties.Resources.previewbg;
-            this.imgPreview.Location = new System.Drawing.Point(3, 3);
-            this.imgPreview.MinimumSize = new System.Drawing.Size(32, 24);
-            this.imgPreview.Name = "imgPreview";
-            this.imgPreview.Size = new System.Drawing.Size(732, 668);
-            this.imgPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgPreview.TabIndex = 4;
-            this.imgPreview.TabStop = false;
-            // 
-            // imgPreview2
-            // 
-            this.imgPreview2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.imgPreview2.BackColor = System.Drawing.Color.Transparent;
-            this.imgPreview2.Image = global::VR_View.Properties.Resources.previewbg;
-            this.imgPreview2.InitialImage = global::VR_View.Properties.Resources.previewbg;
-            this.imgPreview2.Location = new System.Drawing.Point(741, 3);
-            this.imgPreview2.MinimumSize = new System.Drawing.Size(32, 24);
-            this.imgPreview2.Name = "imgPreview2";
-            this.imgPreview2.Size = new System.Drawing.Size(732, 668);
-            this.imgPreview2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.imgPreview2.TabIndex = 37;
-            this.imgPreview2.TabStop = false;
             // 
             // pictureBox6
             // 
@@ -312,11 +269,120 @@
             this.versionLabel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.versionLabel.AutoSize = true;
             this.versionLabel.ForeColor = System.Drawing.SystemColors.ButtonShadow;
-            this.versionLabel.Location = new System.Drawing.Point(1442, 54);
+            this.versionLabel.Location = new System.Drawing.Point(1409, 54);
             this.versionLabel.Name = "versionLabel";
-            this.versionLabel.Size = new System.Drawing.Size(46, 13);
+            this.versionLabel.Size = new System.Drawing.Size(76, 13);
             this.versionLabel.TabIndex = 48;
-            this.versionLabel.Text = "v1.1.0.0";
+            this.versionLabel.Text = "v1.1.0.0 - Fork";
+            // 
+            // panelPreviewContainer
+            // 
+            this.panelPreviewContainer.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panelPreviewContainer.AutoSize = true;
+            this.panelPreviewContainer.Controls.Add(this.imgPreview2);
+            this.panelPreviewContainer.Controls.Add(this.imgPreview);
+            this.panelPreviewContainer.Location = new System.Drawing.Point(12, 113);
+            this.panelPreviewContainer.Name = "panelPreviewContainer";
+            this.panelPreviewContainer.Size = new System.Drawing.Size(1476, 674);
+            this.panelPreviewContainer.TabIndex = 49;
+            // 
+            // imgPreview
+            // 
+            this.imgPreview.Image = global::VR_View.Properties.Resources.previewbg;
+            this.imgPreview.Location = new System.Drawing.Point(3, 3);
+            this.imgPreview.Name = "imgPreview";
+            this.imgPreview.Size = new System.Drawing.Size(732, 668);
+            this.imgPreview.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgPreview.TabIndex = 0;
+            this.imgPreview.TabStop = false;
+            // 
+            // imgPreview2
+            // 
+            this.imgPreview2.Image = global::VR_View.Properties.Resources.previewbg;
+            this.imgPreview2.Location = new System.Drawing.Point(741, 3);
+            this.imgPreview2.Name = "imgPreview2";
+            this.imgPreview2.Size = new System.Drawing.Size(732, 668);
+            this.imgPreview2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.imgPreview2.TabIndex = 1;
+            this.imgPreview2.TabStop = false;
+            // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(648, 40);
+            this.trackBar1.Maximum = 100;
+            this.trackBar1.Minimum = -100;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(200, 45);
+            this.trackBar1.TabIndex = 50;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
+            // labelTrackBar1
+            // 
+            this.labelTrackBar1.AutoSize = true;
+            this.labelTrackBar1.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelTrackBar1.Location = new System.Drawing.Point(745, 72);
+            this.labelTrackBar1.Name = "labelTrackBar1";
+            this.labelTrackBar1.Size = new System.Drawing.Size(13, 13);
+            this.labelTrackBar1.TabIndex = 51;
+            this.labelTrackBar1.Text = "0";
+            // 
+            // labelTrackBar2
+            // 
+            this.labelTrackBar2.AutoSize = true;
+            this.labelTrackBar2.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelTrackBar2.Location = new System.Drawing.Point(993, 72);
+            this.labelTrackBar2.Name = "labelTrackBar2";
+            this.labelTrackBar2.Size = new System.Drawing.Size(13, 13);
+            this.labelTrackBar2.TabIndex = 53;
+            this.labelTrackBar2.Text = "0";
+            // 
+            // trackBar2
+            // 
+            this.trackBar2.Location = new System.Drawing.Point(896, 40);
+            this.trackBar2.Maximum = 100;
+            this.trackBar2.Minimum = -100;
+            this.trackBar2.Name = "trackBar2";
+            this.trackBar2.Size = new System.Drawing.Size(200, 45);
+            this.trackBar2.TabIndex = 52;
+            this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
+            // 
+            // labelTrackBar3
+            // 
+            this.labelTrackBar3.AutoSize = true;
+            this.labelTrackBar3.ForeColor = System.Drawing.SystemColors.Control;
+            this.labelTrackBar3.Location = new System.Drawing.Point(1245, 72);
+            this.labelTrackBar3.Name = "labelTrackBar3";
+            this.labelTrackBar3.Size = new System.Drawing.Size(13, 13);
+            this.labelTrackBar3.TabIndex = 55;
+            this.labelTrackBar3.Text = "0";
+            // 
+            // trackBar3
+            // 
+            this.trackBar3.Location = new System.Drawing.Point(1148, 40);
+            this.trackBar3.Maximum = 100;
+            this.trackBar3.Minimum = -100;
+            this.trackBar3.Name = "trackBar3";
+            this.trackBar3.Size = new System.Drawing.Size(200, 45);
+            this.trackBar3.TabIndex = 54;
+            this.trackBar3.Scroll += new System.EventHandler(this.trackBar3_Scroll);
+            // 
+            // btnReset
+            // 
+            this.btnReset.BackColor = System.Drawing.Color.Gray;
+            this.btnReset.FlatAppearance.BorderSize = 0;
+            this.btnReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnReset.Font = new System.Drawing.Font("Tahoma", 8F, System.Drawing.FontStyle.Bold);
+            this.btnReset.ForeColor = System.Drawing.Color.Black;
+            this.btnReset.Location = new System.Drawing.Point(560, 40);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(82, 30);
+            this.btnReset.TabIndex = 56;
+            this.btnReset.Tag = "start";
+            this.btnReset.Text = "Reset";
+            this.btnReset.UseVisualStyleBackColor = false;
+            this.btnReset.Click += new System.EventHandler(this.btnReset_Click);
             // 
             // frmMain
             // 
@@ -325,13 +391,19 @@
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1500, 900);
+            this.Controls.Add(this.btnReset);
+            this.Controls.Add(this.labelTrackBar3);
+            this.Controls.Add(this.trackBar3);
+            this.Controls.Add(this.labelTrackBar2);
+            this.Controls.Add(this.trackBar2);
+            this.Controls.Add(this.labelTrackBar1);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.versionLabel);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -341,6 +413,7 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.numShotEvery);
             this.Controls.Add(this.btnStopServer);
+            this.Controls.Add(this.panelPreviewContainer);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(800, 600);
@@ -351,9 +424,6 @@
             this.Text = "VR_View";
             this.Load += new System.EventHandler(this.frmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numShotEvery)).EndInit();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.imgPreview2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -361,30 +431,43 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.panelPreviewContainer.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.imgPreview)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgPreview2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.PictureBox imgPreview;
         private System.Windows.Forms.Button btnStopServer;
         private System.Windows.Forms.Button btnStartViewer;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numShotEvery;
         private System.Windows.Forms.ComboBox comboScreens;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.PictureBox imgPreview2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label versionLabel;
+        private System.Windows.Forms.Panel panelPreviewContainer;
+        private System.Windows.Forms.PictureBox imgPreview2;
+        private System.Windows.Forms.PictureBox imgPreview;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label labelTrackBar1;
+        private System.Windows.Forms.Label labelTrackBar2;
+        private System.Windows.Forms.TrackBar trackBar2;
+        private System.Windows.Forms.Label labelTrackBar3;
+        private System.Windows.Forms.TrackBar trackBar3;
+        private System.Windows.Forms.Button btnReset;
     }
 }
 
